@@ -1,0 +1,15 @@
+import { ref } from 'vue';
+
+interface Project {
+    id: number,
+    title: string,
+    image: string,
+    codeLink: string,
+    demoLink: string,
+    description: string
+}
+
+const projects= ref<Project[] >([
+    {id: 1, title: 'Vue Shop', image: 'vue-shop.png', codeLink: '', demoLink: '', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quo quis id error quasi eligendi omnis sit iure molestiae, rerum voluptates numquam velit incidunt dolorem. Veritatis facere consequuntur dolor nisi.'},
+    {id: 1, title: 'Vue Shop', image: 'vue-shop.png', codeLink: '', demoLink: '', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quo quis id error quasi eligendi omnis sit iure molestiae, rerum voluptates numquam velit incidunt dolorem. Veritatis facere consequuntur dolor nisi.'}
+]);
