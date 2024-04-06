@@ -1,5 +1,5 @@
 <template>
-    <section id="contact" class="w-screen h-screen px-6 md:px-16 bg-slate-950">
+    <section id="contact" class="w-screen h-screen px-6 md:px-16 bg-[#030712]">
         <div class="w-full h-4/6 md:h-5/6 flex justify-center items-center">
             <div class="w-full lg:w-2/6 text-center">
                 <h1 class="mx-auto mb-4 font-bold text-3xl text-green-400">

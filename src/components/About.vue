@@ -1,5 +1,5 @@
 <template>
-    <section id="about" class="w-screen pt-28 lg:pt-12 lg:h-screen flex flex-col lg:flex-row justify-between gap-8 lg:gap-0 bg-slate-950 overflow-x-hidden">
+    <section id="about" class="w-screen pt-28 lg:min-h-screen flex flex-col flex-wrap lg:flex-row justify-between gap-8 lg:gap-0 lg:gap-y-5 bg-[#030712] overflow-x-hidden">
         <div class="w-full lg:w-2/6 h-auto lg:h-full ps-6 md:ps-16 lg:ps-0 flex justify-start lg:justify-center items-start">
             <div class="w-11/12 sm:w-1/3 lg:w-4/6 h-auto overflow-hidden rounded-lg">
                 <img src="../assets/portfolio-about.jpg" class="w-full h-auto" alt="about">
@@ -36,6 +36,34 @@
                 </p>
             </div>
         </div>
+        <div class="w-full text-white lg:w-2/6 h-auto px-6 md:px-16 lg:ps-0 flex justify-start lg:justify-center items-start">
+            <div class="w-11/12 sm:w-full lg:w-4/6 h-auto overflow-hidden">
+                <h3 class="mb-3 py-3 font-semibold text-xl text-white uppercase tracking-widest border-b-2 border-green-400">
+                    Education
+                </h3>
+                <div class="w-full flex items-center gap-3 lg:gap-2 mb-5">
+                    <div class="w-1/12 lg:w-1/6 h-auto">
+                        <img src="/behs.png" class="w-full h-auto" alt="behs">
+                    </div>
+                    <span class="w-5/6 text-xs text-zinc-400">High School Graduate, B.E.H.S (4) Thaketa, Yangon, Myanmar</span>
+                </div>
+                <div class="w-full flex items-start gap-3 lg:gap-2 mb-5">
+                    <div class="w-1/12 lg:w-1/6 h-auto">
+                        <img src="/ttu.png" class="w-full h-auto" alt="ttu">
+                    </div>
+                    <span class="w-5/6 text-xs text-zinc-400">
+                        2016 ~ 2020 - Enrolled at TTU (Thanlyin Technological University) in 2016 and successfully completed coursework up to the fourth year.
+                        Currently on hiatus, taking a break from studies due to the impact of COVID-19 and political situation.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="bg-green-400 w-2/6 h-[50px]">hello</div>
+        <div class="w-full border text-white lg:w-2/6 h-auto lg:h-full pe-6 md:pe-16 lg:pe-0 flex justify-start lg:justify-center items-start">
+            <div class="w-11/12 border sm:w-1/3 lg:w-4/6 h-auto overflow-hidden">
+                hello
+            </div>
+        </div> -->
     </section>
 </template>
 
