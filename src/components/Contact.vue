@@ -29,6 +29,14 @@
                 </li>
                 <li>
                     <a 
+                        href="https://www.linkedin.com/in/suanhsawmtung/" target="_blank"
+                        class="text-white text-decoration-none outline-none"
+                    >
+                        <i class="fa-brands fa-linkedin text-3xl hover:text-green-400"></i>
+                    </a>
+                </li>
+                <li>
+                    <a 
                         href="https://www.facebook.com/augustine.kyawthet" target="_blank"
                         class="text-white text-decoration-none outline-none"
                     >

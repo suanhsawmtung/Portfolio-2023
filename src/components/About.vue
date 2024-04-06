@@ -1,11 +1,11 @@
 <template>
-    <section id="about" class="w-screen pt-28 lg:pt-0 lg:h-screen flex flex-col lg:flex-row justify-between gap-8 lg:gap-0 bg-slate-950 overflow-x-hidden">
-        <div class="w-full lg:w-2/6 h-auto lg:h-full ps-6 md:ps-16 lg:ps-0 flex justify-start lg:justify-center items-center">
+    <section id="about" class="w-screen pt-28 lg:pt-12 lg:h-screen flex flex-col lg:flex-row justify-between gap-8 lg:gap-0 bg-slate-950 overflow-x-hidden">
+        <div class="w-full lg:w-2/6 h-auto lg:h-full ps-6 md:ps-16 lg:ps-0 flex justify-start lg:justify-center items-start">
             <div class="w-11/12 sm:w-1/3 lg:w-4/6 h-auto overflow-hidden rounded-lg">
                 <img src="../assets/portfolio-about.jpg" class="w-full h-auto" alt="about">
             </div>
         </div>
-        <div class="w-full lg:w-4/6 lg:h-full flex items-center">
+        <div class="w-full lg:w-4/6 lg:h-full flex items-start">
             <div class="w-full px-6 md:ps-16 lg:ps-0 md:pe-16 text-white">
                 <h3 
                     v-if="windowWidth < 1240"
