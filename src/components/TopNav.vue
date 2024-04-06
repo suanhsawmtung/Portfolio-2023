@@ -38,7 +38,7 @@ interface hello {
 export default{
     data(): hello {
         return {
-            activeLink: ''
+            activeLink: null
         }
     },
     props: {
@@ -47,19 +47,24 @@ export default{
             required: true
         }
     },
-    mounted() {
-        const sections = document.querySelectorAll('section') as NodeListOf<HTMLElement>;
-        window.addEventListener('scroll', () => {
+    methods: {
+        setActiveLink (sections: NodeListOf<HTMLElement>) {
             sections.forEach(section => {
                 let top = window.scrollY;
                 let offset = section.offsetTop - 150;
                 let height = section.offsetHeight;
                 let id = section.getAttribute('id');
 
-                if(top >= offset && top < offset + height) 
-                    this.activeLink = id;
+                if(top >= offset && top < offset + height) this.activeLink = id;
             })
+        }, 
+    },
+    mounted() {
+        const sections = document.querySelectorAll('section') as NodeListOf<HTMLElement>;
+        window.addEventListener('scroll', () => {
+            this.setActiveLink(sections);
         });
+        this.setActiveLink(sections);
     },
 }
 

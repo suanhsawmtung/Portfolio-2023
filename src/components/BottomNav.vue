@@ -6,28 +6,28 @@
     >
         <ul 
             class="w-full flex justify-between items-center text-sm font-semibold 
-            text-decoration-none list-none flex justify-between items-center"
+            text-decoration-none list-none "
         >
             <li :class="{ 'text-green-400': activeLink === 'home'}">
-                <a href="#home" class="inline-block w-full h-full flex flex-col items-center">
+                <a href="#home" class=" w-full h-full flex flex-col items-center">
                     <i class="fa-solid fa-house text-2xl"></i>
                     Home
                 </a>
             </li>
             <li :class="{ 'text-green-400': activeLink === 'about'}">
-                <a href="#about" class="inline-block w-full h-full flex flex-col items-center">
+                <a href="#about" class="w-full h-full flex flex-col items-center">
                     <i class="fa-regular fa-user text-2xl"></i>
                     About
                 </a>
             </li>
             <li :class="{ 'text-green-400': activeLink === 'projects'}">
-                <a href="#projects" class="inline-block w-full h-full flex flex-col items-center">
+                <a href="#projects" class="w-full h-full flex flex-col items-center">
                     <i class="fa-brands fa-codepen text-2xl"></i>
                     Projects
                 </a>
             </li>
             <li :class="{ 'text-green-400': activeLink === 'contact'}">
-                <a href="#contact" class="inline-block w-full h-full flex flex-col items-center">
+                <a href="#contact" class="w-full h-full flex flex-col items-center">
                     <i class="fa-regular fa-paper-plane text-2xl"></i>
                     Contact
                 </a>
@@ -54,19 +54,24 @@ export default{
             required: true
         }
     },
-    mounted() {
-        const sections = document.querySelectorAll('section') as NodeListOf<HTMLElement>;
-        window.addEventListener('scroll', () => {
+    methods: {
+        setActiveLink (sections: NodeListOf<HTMLElement>) {
             sections.forEach(section => {
                 let top = window.scrollY;
                 let offset = section.offsetTop - 150;
                 let height = section.offsetHeight;
                 let id = section.getAttribute('id');
 
-                if(top >= offset && top < offset + height) 
-                    this.activeLink = id;
+                if(top >= offset && top < offset + height) this.activeLink = id;
             })
+        }, 
+    },
+    mounted() {
+        const sections = document.querySelectorAll('section') as NodeListOf<HTMLElement>;
+        window.addEventListener('scroll', () => {
+            this.setActiveLink(sections);
         });
+        this.setActiveLink(sections);
     },
 }
 
