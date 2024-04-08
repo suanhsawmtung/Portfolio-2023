@@ -11,12 +11,14 @@
             <li :class="{ 'text-green-400': activeLink === 'home'}">
                 <a href="#home" class=" w-full h-full flex flex-col items-center">
                     <i class="fa-solid fa-house text-2xl"></i>
+                    <!-- <HomeIcon class="text-2xl text-white" /> -->
                     Home
                 </a>
             </li>
             <li :class="{ 'text-green-400': activeLink === 'about'}">
                 <a href="#about" class="w-full h-full flex flex-col items-center">
                     <i class="fa-regular fa-user text-2xl"></i>
+                    <!-- <AboutIcon /> -->
                     About
                 </a>
             </li>
@@ -37,6 +39,8 @@
 </template>
 
 <script lang="ts">
+// import AboutIcon from './icons/AboutIcon.vue';
+// import HomeIcon from './icons/HomeIcon.vue';
 
 interface hello {
     activeLink: string | null
@@ -48,6 +52,10 @@ export default{
             activeLink: ''
         }
     },
+    // components: { 
+    //     HomeIcon,
+    //     AboutIcon
+    // },
     props: {
         windowWidth: {
             type: Number,

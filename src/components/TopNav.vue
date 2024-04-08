@@ -3,7 +3,7 @@
         class="w-screen fixed top-0 left-0 text-white bg-slate-950 px-6 md:px-16 py-5
             flex justify-between items-center border-b border-slate-800"
     >
-        <div class="w-12 h-12 border-4 border-slate-800 hover:border-green-400 overflow-hidden rounded-full">
+        <div class="w-12 h-12 border-4 border-slate-800 overflow-hidden rounded-full">
             <img src="../assets/portfolio-logo.jpg" class="w-full h-full object-cover" alt="">
         </div>
         <ul 
@@ -23,8 +23,8 @@
                 <a href="#contact" :class="{'text-green-400': activeLink === 'contact'}">Contact</a>
             </li>
         </ul>
-        <div class="w-12 h-12 flex justify-end items-center" v-else>
-            <i class="fa-solid fa-bars text-white text-3xl"></i>
+        <div class="text-xs sm:text-xl font-bold flex justify-end items-center text-green-400" v-else>
+            Code with love and coffee by Augustine...
         </div>
     </nav>
 </template>

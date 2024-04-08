@@ -1,3 +1,5 @@
+
+import HeroSvg from './icons/HeroSvg.vue';
 <template>
     <section id="home" class="w-screen lg:h-screen px-6 md:px-16 flex flex-col lg:flex-row justify-between bg-slate-950 overflow-x-hidden">
         <div class="w-full lg:w-1/2 h-[30rem] sm:h-[34rem] lg:h-full flex items-center sm:items-center lg:items-center">
@@ -26,10 +28,16 @@
         </div>
         <div class="w-full lg:w-1/2 h-96 sm:h-[30rem] lg:h-full flex justify-center lg:justify-end items-end sm:items-center order-first sm:order-last">
             <div class="w-full md:w-4/6 h-auto">
-                <img src="../assets/portfolio-home.svg" class="w-full h-auto" alt="home">
+                <!-- <img src="../assets/portfolio-home.svg" class="w-full h-auto" alt="home"> -->
+                <HeroSvg class="w-full h-auto" />
             </div>
         </div>
     </section>
 </template>
+
+<script lang="ts" setup>
+import HeroSvg from './icons/HeroSvg.vue';
+
+</script>
 
 
