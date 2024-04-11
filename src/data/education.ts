@@ -1,4 +1,4 @@
-interface Step{
+export interface Step{
     id: number;
     info: string;
     classes: string;

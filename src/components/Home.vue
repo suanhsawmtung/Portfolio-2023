@@ -21,7 +21,6 @@
         </div>
         <div class="w-full lg:w-1/2 h-96 sm:h-[30rem] lg:h-full flex justify-center lg:justify-end items-end sm:items-center order-first sm:order-last">
             <div class="w-full md:w-4/6 h-auto">
-                <!-- <img src="../assets/portfolio-home.svg" class="w-full h-auto" alt="home"> -->
                 <HeroSvg class="w-full h-auto" />
             </div>
         </div>

@@ -1,4 +1,4 @@
-interface Skill {
+export interface Skill {
     id: number;
     component: string;
     title: string;
