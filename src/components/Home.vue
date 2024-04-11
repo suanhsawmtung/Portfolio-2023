@@ -1,5 +1,3 @@
-
-import HeroSvg from './icons/HeroSvg.vue';
 <template>
     <section id="home" class="w-screen lg:h-screen px-6 md:px-16 flex flex-col lg:flex-row justify-between bg-slate-950 overflow-x-hidden">
         <div class="w-full lg:w-1/2 h-[30rem] sm:h-[34rem] lg:h-full flex items-center sm:items-center lg:items-center">
@@ -11,19 +9,14 @@ import HeroSvg from './icons/HeroSvg.vue';
                 <h3 class="mb-2 sm:mb-5 font-bold text-xl sm:text-3xl text-white">
                     A <span class="text-green-400">Full-stack Developer</span>
                 </h3>
-                <p class="text-zinc-400 mb-8 text-sm sm:text-md">
+                <Description class="!mb-8">
                     If you find it challenging to pronounce my name, you can simply call me Augustine.
                     I am deeply committed to pursuing a career in programming. Currently, my passion lies in 
                     developing full-stack web applications, and I am actively seeking employment opportunities 
                     that can provide both valuable experience and income.Please feel free to explore my portfolio 
                     to learn more about me.
-                </p>
-                <a 
-                    href="#contact"
-                    class="px-6 py-4 bg-green-400 text-slate-950 tracking-wider rounded-lg"
-                >
-                    Contact Me!
-                </a>
+                </Description>
+                <Button href="#contact">Contact Me!</Button>
             </div>
         </div>
         <div class="w-full lg:w-1/2 h-96 sm:h-[30rem] lg:h-full flex justify-center lg:justify-end items-end sm:items-center order-first sm:order-last">
@@ -37,6 +30,8 @@ import HeroSvg from './icons/HeroSvg.vue';
 
 <script lang="ts" setup>
 import HeroSvg from './icons/HeroSvg.vue';
+import Button from './atoms/Button.vue';
+import Description from './atoms/Description.vue';
 
 </script>
 

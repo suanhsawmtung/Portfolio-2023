@@ -2,19 +2,18 @@
     <section id="contact" class="w-screen h-screen px-6 md:px-16 bg-[#030712]">
         <div class="w-full h-4/6 md:h-5/6 flex justify-center items-center">
             <div class="w-full lg:w-2/6 text-center">
-                <h1 class="mx-auto mb-4 font-bold text-3xl text-green-400">
-                    Contact Me
-                </h1>
-                <p class="text-zinc-400 mb-6">
+                <Header class="mx-auto"> Contact Me</Header>
+                <!-- <p class="text-zinc-400 mb-6">
                     You can directly call me with the phone number: +959783312791.
                     Otherwise, you can also send mail by clicking the button below.
                     Let's make things better together more than we could imagine. 
-                </p>
-                <a  href="mailto:suanhsawmtung1999@gmail.com"
-                    class="px-6 py-3 bg-green-400 text-slate-950 tracking-wider rounded-lg"
-                >
-                    Get in touch!
-                </a>
+                </p> -->
+                <Description class="!mb-6">
+                    You can directly call me with the phone number: +959783312791.
+                    Otherwise, you can also send mail by clicking the button below.
+                    Let's make things better together more than we could imagine.
+                </Description>
+                <Button  href="mailto:suanhsawmtung1999@gmail.com">Get in touch!</Button>
             </div>
         </div>
         <div class="w-full flex flex-col md:flex-row md:justify-between items-center gap-4 md:gap-0">
@@ -60,6 +59,9 @@
 </template>
 
 <script setup lang="ts">
+import Header from './atoms/Header.vue';
+import Button from './atoms/Button.vue';
+import Description from './atoms/Description.vue';
 
 
 </script>
