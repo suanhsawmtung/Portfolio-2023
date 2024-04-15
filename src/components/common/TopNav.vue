@@ -1,10 +1,10 @@
 <template>
     <nav 
-        class="w-screen fixed top-0 left-0 text-white bg-slate-950 px-6 md:px-16 py-5
+        class="w-screen 2xl:max-w-[1440px] 2xl:mx-auto fixed top-0 text-white bg-slate-950 px-6 md:px-16 py-5
             flex justify-between items-center border-b border-slate-800"
     >
         <div class="w-12 h-12 border-4 border-slate-800 overflow-hidden rounded-full">
-            <img src="../assets/portfolio-logo.jpg" class="w-full h-full object-cover" alt="">
+            <img src="../../assets/portfolio-logo.jpg" class="w-full h-full object-cover" alt="">
         </div>
         <ul 
             v-if="windowWidth > 768"

@@ -1,5 +1,5 @@
 <template>
-    <section id="projects" class="w-screen lg:min-h-screen py-28 flex flex-col justify-center bg-slate-950 overflow-x-hidden">
+    <section id="projects" class="w-screen 2xl:max-w-[1440px] lg:min-h-screen 2xl:min-h-[60vh] py-28 flex flex-col justify-center bg-slate-950 overflow-x-hidden">
         <Header class="mx-auto !mb-12">
             Some of My Works
         </Header>

@@ -1,13 +1,8 @@
 <template>
-    <section id="contact" class="w-screen h-screen px-6 md:px-16 bg-[#030712]">
+    <section id="contact" class="w-screen 2xl:max-w-[1440px] h-screen 2xl:h-[60vh] px-6 md:px-16 bg-[#030712]">
         <div class="w-full h-4/6 md:h-5/6 flex justify-center items-center">
             <div class="w-full lg:w-2/6 text-center">
                 <Header class="mx-auto"> Contact Me</Header>
-                <!-- <p class="text-zinc-400 mb-6">
-                    You can directly call me with the phone number: +959783312791.
-                    Otherwise, you can also send mail by clicking the button below.
-                    Let's make things better together more than we could imagine. 
-                </p> -->
                 <Description class="!mb-6">
                     You can directly call me with the phone number: +959783312791.
                     Otherwise, you can also send mail by clicking the button below.

@@ -1,5 +1,5 @@
 <template>
-    <section id="about" class="w-screen pt-28 sm:pb-28 pb-6s lg:min-h-screen flex flex-col flex-wrap lg:flex-row justify-between gap-8 lg:gap-0 lg:gap-y-5 bg-[#030712] overflow-x-hidden">
+    <section id="about" class="w-screen 2xl:max-w-[1440px] pt-28 sm:pb-28 pb-6 lg:min-h-screen flex flex-col flex-wrap lg:flex-row justify-between gap-8 lg:gap-0 lg:gap-y-5 bg-[#030712] overflow-x-hidden">
         <div class="w-full lg:w-2/6 h-auto lg:h-full ps-6 md:ps-16 lg:ps-0 flex justify-start lg:justify-center items-start">
             <div class="w-11/12 sm:w-1/3 lg:w-4/6 h-auto overflow-hidden rounded-lg">
                 <img src="../assets/portfolio-about.jpg" class="w-full h-auto" alt="about">
