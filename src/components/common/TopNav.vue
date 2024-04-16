@@ -1,6 +1,6 @@
 <template>
     <nav 
-        class="w-screen 2xl:max-w-[1440px] 2xl:mx-auto fixed top-0 text-white bg-slate-950 px-6 md:px-16 py-5
+        class="w-screen 2xl:max-w-[1440px] 2xl:mx-auto fixed top-0 text-white bg-slate-950 px-6 md:px-16 py-5 z-50
             flex justify-between items-center border-b border-slate-800"
     >
         <div class="w-12 h-12 border-4 border-slate-800 overflow-hidden rounded-full">
@@ -29,47 +29,43 @@
     </nav>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
 
-interface hello {
-    activeLink: string | null
+defineProps<{
+    windowWidth: number
+}>();
+
+const activeLink = ref('');
+
+const setActiveLink = (sections: NodeListOf<HTMLElement>) => {
+    sections.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 100;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+
+        if(top >= offset && top < offset + height) activeLink.value = id as string;
+    })
 }
 
-export default{
-    data(): hello {
-        return {
-            activeLink: null
-        }
-    },
-    props: {
-        windowWidth: {
-            type: Number,
-            required: true
-        }
-    },
-    methods: {
-        setActiveLink (sections: NodeListOf<HTMLElement>) {
-            sections.forEach(section => {
-                let top = window.scrollY;
-                let offset = section.offsetTop - 150;
-                let height = section.offsetHeight;
-                let id = section.getAttribute('id');
+onMounted(() => {
+    const sections = document.querySelectorAll('section') as NodeListOf<HTMLElement>;
+    const sectionObservers = document.querySelectorAll('.section-observer') as NodeListOf<HTMLElement>;
 
-                if(top >= offset && top < offset + height) this.activeLink = id;
-            })
-        }, 
-    },
-    mounted() {
-        const sections = document.querySelectorAll('section') as NodeListOf<HTMLElement>;
-        window.addEventListener('scroll', () => {
-            this.setActiveLink(sections);
-        });
-        this.setActiveLink(sections);
-    },
-}
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle('show', entry.isIntersecting);
+            if(entry.isIntersecting) observer.unobserve(entry.target);
+        })
+    });
+
+    sectionObservers.forEach(sectionObserver => observer.observe(sectionObserver));
+
+    window.addEventListener('scroll', () => {
+        setActiveLink(sections);
+    });
+    setActiveLink(sections);
+})
 
 </script>
-
-<style scoped>
-
-</style>

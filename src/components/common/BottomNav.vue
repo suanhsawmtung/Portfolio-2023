@@ -11,14 +11,12 @@
             <li :class="{ 'text-green-400': activeLink === 'home'}">
                 <a href="#home" class=" w-full h-full flex flex-col items-center">
                     <i class="fa-solid fa-house text-2xl"></i>
-                    <!-- <HomeIcon class="text-2xl text-white" /> -->
                     Home
                 </a>
             </li>
             <li :class="{ 'text-green-400': activeLink === 'about'}">
                 <a href="#about" class="w-full h-full flex flex-col items-center">
                     <i class="fa-regular fa-user text-2xl"></i>
-                    <!-- <AboutIcon /> -->
                     About
                 </a>
             </li>
@@ -38,53 +36,33 @@
     </nav>
 </template>
 
-<script lang="ts">
-// import AboutIcon from './icons/AboutIcon.vue';
-// import HomeIcon from './icons/HomeIcon.vue';
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
 
-interface hello {
-    activeLink: string | null
+defineProps<{
+    windowWidth: number
+}>();
+
+const activeLink = ref('');
+
+const setActiveLink = (sections: NodeListOf<HTMLElement>) => {
+    sections.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 50;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+
+        if(top >= offset && top < offset + height) activeLink.value = id as string;
+    })
 }
 
-export default{
-    data(): hello {
-        return {
-            activeLink: ''
-        }
-    },
-    // components: { 
-    //     HomeIcon,
-    //     AboutIcon
-    // },
-    props: {
-        windowWidth: {
-            type: Number,
-            required: true
-        }
-    },
-    methods: {
-        setActiveLink (sections: NodeListOf<HTMLElement>) {
-            sections.forEach(section => {
-                let top = window.scrollY;
-                let offset = section.offsetTop - 150;
-                let height = section.offsetHeight;
-                let id = section.getAttribute('id');
-
-                if(top >= offset && top < offset + height) this.activeLink = id;
-            })
-        }, 
-    },
-    mounted() {
-        const sections = document.querySelectorAll('section') as NodeListOf<HTMLElement>;
-        window.addEventListener('scroll', () => {
-            this.setActiveLink(sections);
-        });
-        this.setActiveLink(sections);
-    },
-}
+onMounted(() => {
+    const sections = document.querySelectorAll('section') as NodeListOf<HTMLElement>;
+    window.addEventListener('scroll', () => {
+        setActiveLink(sections);
+    });
+    setActiveLink(sections);
+})
 
 </script>
 
-<style scoped>
-
-</style>
