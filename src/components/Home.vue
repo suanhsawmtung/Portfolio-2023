@@ -1,9 +1,9 @@
 <template>
-    <section id="home" class="2xl:max-w-[1440px] min-h-screen flex items-end 2xl:items-center px-6 md:px-16 bg-slate-950">
+    <section id="home" class="2xl:max-w-[1440px] min-h-screen flex items-end sm:items-center lg:items-end 2xl:items-center px-6 md:px-16 bg-slate-950">
         <div class="w-full h-full text-white mt-36 mb-28">
             <h1 class="mb-2 sm:mb-6 font-extrabold flex flex-col gap-4">
-                <span class="text-lg">Hi, I'm </span>
-                <span class="text-green-400 text-4xl sm:text-6xl">Suanh Sawm Tung,</span>
+                <span class="text-lg">Hi, my name is </span>
+                <span class="text-green-400 text-4xl sm:text-6xl">Suanh Sawm Tung</span>
             </h1>
             <h3 class="mb-6 sm:mb-8 font-bold text-4xl sm:text-6xl text-zinc-400 shadow">
                 An enthusiastic frontend and backend developer who loves creating scalable web applications.
@@ -15,16 +15,10 @@
             </Description>
             <Button href="#contact">Contact Me!</Button>
         </div>
-        <!-- <div class="w-full lg:w-1/2 h-96 sm:h-[30rem] lg:h-full flex justify-center lg:justify-end items-end sm:items-center order-first sm:order-last">
-            <div class="w-full md:w-4/6 h-auto">
-                <HeroSvg class="w-full h-auto" />
-            </div>
-        </div> -->
     </section>
 </template>
 
 <script lang="ts" setup>
-// import HeroSvg from './icons/HeroSvg.vue';
 import Button from './atoms/Button.vue';
 import Description from './atoms/Description.vue';
 

@@ -18,7 +18,7 @@ window.addEventListener('resize', () => {
 
 <template>
   <Layout :windowWidth="windowWidth">
-    <Home v-if="windowWidth > 640" />
+    <Home v-if="windowWidth >= 640" />
     <MobileHome v-else  />
     <About :windowWidth="windowWidth" />
     <Projects />
