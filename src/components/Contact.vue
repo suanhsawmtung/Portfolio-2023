@@ -54,7 +54,7 @@
             <i class="fa-brands fa-facebook text-3xl hover:text-green-400"></i>
           </a>
         </li>
-        <li class="section-observer opacity-0 duration-700">
+        <!-- <li class="section-observer opacity-0 duration-700">
           <a
             href="https://www.instagram.com/joy_boy_sst/"
             target="_blank"
@@ -62,7 +62,7 @@
           >
             <i class="fa-brands fa-instagram text-3xl hover:text-green-400"></i>
           </a>
-        </li>
+        </li> -->
       </ul>
       <h3
         class="text-zinc-400 text-sm md:text-md section-observer translate-x-40 opacity-0 duration-700"

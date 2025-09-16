@@ -13,7 +13,7 @@ export const projects: Project[] = [
     description:
       "A SaaS platform with multitenancy support for volunteering organizations, using React.js, Tailwind CSS, TanStack Query, Zustand, Express.js, Node.js, PostgreSQL, and Prisma.",
     links: [{ title: "View", link: "https://mycarecredit.org/" }],
-    image: "/vue-shop.png",
+    image: "/mycarecredit.png",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ export const projects: Project[] = [
         link: "https://play.google.com/store/apps/details?id=dev.kakushingijutu.sweethoney&pli=1",
       },
     ],
-    image: "/vue-shop-api.png",
+    image: "/executive-club.png",
   },
   {
     id: 4,
@@ -51,6 +51,6 @@ export const projects: Project[] = [
         link: "https://apps.apple.com/jp/app/work/id6747097310?l=en-US",
       },
     ],
-    image: "/weather-app.png",
+    image: "/work-plus.png",
   },
 ];
